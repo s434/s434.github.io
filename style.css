@@ -1,0 +1,210 @@
+body{
+    justify-content: center;
+    background-color: #333;
+   
+}
+
+#myVideo {
+    position: fixed;
+  top: 50%; /* Center the video vertically */
+  left: 50%; /* Center the video horizontally */
+  transform: translate(-50%, -50%); /* Move the video back up and left by 50% of its own size */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Ensure the video remains in the background */
+  object-fit: cover; /* Cover the entire viewport */
+  }
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.756); /* Transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a slight shadow */
+    width: 90%; /* Initial width */
+    
+    margin: 0 auto; /* Centering the card horizontally */
+    margin-top: 50px; /* Adjust as needed for vertical centering */
+    color: white;
+    font-family: "Open Sans", sans-serif;
+
+ 
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+.weather {
+
+   
+    margin-right: 20px; /* Margin between weather and forecast */
+    padding-left: 10px;
+    padding-right: 69px;
+}
+.left h2{
+    font-size: 30px;
+}
+.extra-info{
+    display: flex;
+    flex-direction: column;
+}
+.forecast-card {
+    flex: 1; /* Make the forecast-card flexible to occupy available space */
+}
+
+.search {
+    margin-bottom: 20px; /* Add some space below the search */
+   
+}
+
+.example {
+    display: flex;
+    gap:1px;
+}
+
+input[type="text"] {
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #555;
+    color: white;
+    font-size: 1.25rem;
+    padding-right: 1px;
+    
+   
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.weather .img{
+
+    padding-bottom: 0px;
+}
+
+
+.day-forecast {
+    border: 1px solid #ccc; /* Add a solid border at the top */
+    padding: 50px; /* Add some space above the content */
+    justify-content: center;
+
+    
+    
+}
+.day-forecast h2{
+    padding-bottom: 20px;
+}
+
+.weather-cards {
+    display: flex;
+    gap : 3rem;
+    padding-left: 0px;
+    justify-content: space-between;
+   
+
+
+
+}
+.weather-cards .card1{
+    list-style: none;
+    list-style-type: none;
+    background-color: #4a46465b;
+    color: #fff;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    width: calc(33.33% - 20px);
+    cursor: pointer;
+   
+    
+
+}
+
+.weather-cards .card1 img {
+    max-width: 70px;
+    margin: 1px 0 -5px 0;
+}
+
+.weather-cards .card1:hover{
+    background-color: rgba(255, 255, 255, 0.763);
+    color: #333;
+
+}
+@media screen and (max-width:1500px){
+ 
+    .weather-cards{
+    gap: 2rem;
+
+    }
+   
+    
+}
+
+
+@media screen and (max-width: 1300px) {
+    /* Adjust styles for smaller screens */
+    .content {
+        display: flex;
+    }
+    
+    .weather {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        width: 90%;
+       
+    }
+    .weather h2{
+        font-size: 40px;
+        padding-bottom: 0px;
+    }
+    .weather h4{
+        font-size: 20px;
+    }
+    .left {
+        flex-grow: 1; /* Grow to fill available space */
+        text-align: left;
+    }
+    
+    .right {
+        display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right */
+    justify-content: center;
+    text-align: right;
+
+       
+    }
+    
+    .right h4{
+        padding-right: 60px;
+    }
+    .day-forecast{
+        padding: 10px;
+        
+    }
+    .weather-cards{
+        gap:1rem;
+    }
+
+    .weather-cards .card1 {
+        width: 100%; /* Full width for small screens */
+    }
+}
